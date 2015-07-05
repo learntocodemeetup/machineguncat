@@ -1,6 +1,7 @@
 package com.sflamingb.game.GameWorld;
 
 import com.badlogic.gdx.Gdx;
+import com.sflamingb.game.GameObjects.Dog;
 import com.sflamingb.game.GameObjects.Kitty;
 import com.sflamingb.game.Helpers.AssetLoader;
 import com.sflamingb.game.Helpers.CollisionDetector;
@@ -17,6 +18,7 @@ public class GameWorld {
     private CollisionDetector collisionDetector;
 
     private Kitty kitty;
+    private Dog dog;
 
     public GameWorld(){
         //Gameworld constructor
@@ -27,6 +29,7 @@ public class GameWorld {
         AssetLoader.load();
 
         kitty = new Kitty();
+        dog = new Dog();
     }
 
     public void update(float delta){
@@ -42,5 +45,8 @@ public class GameWorld {
 
     public Kitty getKitty(){
         return kitty;
+    }
+    public Dog getDog(){
+        return dog;
     }
 }

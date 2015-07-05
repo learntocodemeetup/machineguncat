@@ -63,6 +63,7 @@ public class GameRenderer {
         batcher.begin();
         batcher.draw(AssetLoader.backgroundFrame, 0, 0, 1920, 1080);
         world.getKitty().drawSprite(batcher, delta);
+        world.getDog().drawSprite(batcher, delta);
         batcher.end();
 
 
